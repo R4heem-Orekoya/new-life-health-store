@@ -24,7 +24,7 @@ export default function RootLayout({
             className={`${inter.variable} antialiased`}
          >
             <Navbar />
-            <main className="w-[min(1200px,90%)] mx-auto">
+            <main>
                {children}
                
             </main>
