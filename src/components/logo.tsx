@@ -7,7 +7,7 @@ export default function Logo() {
          <div className="relative size-10 object-contain">
             <Image src={LogoImage} fill unoptimized alt="logo image" />
          </div>
-         <span className="text-sm font-medium tracking-tight text-primary leading-0">New Life Health Store</span>
+         <span className=" font-medium tracking-tight text-primary leading-0">New Life Health Store</span>
       </div>
    );
 }

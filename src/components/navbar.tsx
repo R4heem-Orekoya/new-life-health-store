@@ -1,6 +1,6 @@
 "use client";
 
-import { ShoppingCart02Icon } from "@hugeicons/core-free-icons";
+import { ShoppingBasket01Icon } from "@hugeicons/core-free-icons";
 import Logo from "./logo";
 import { HugeiconsIcon } from "@hugeicons/react";
 import Link from "next/link";
@@ -26,10 +26,10 @@ export default function Navbar() {
          <nav className="flex items-center justify-between w-[min(1200px,90%)] mx-auto h-16">
             <Logo />
 
-            <div className="flex items-center gap-16">
-               <ul className="flex items-center gap-6">
+            <div className="flex items-center gap-12">
+               <ul className="flex items-center gap-6 max-sm:hidden">
                   {Navlinks.map((item) => (
-                     <li className="text-muted-foreground font-medium tracking-tight hover:text-primary transition">
+                     <li key={item.href} className="text-muted-foreground font-medium tracking-tight hover:text-primary transition">
                         <Link href={item.href}>{item.label}</Link>
                      </li>
                      
@@ -38,13 +38,10 @@ export default function Navbar() {
 
                <button className="relative text-primary cursor-pointer">
                   <HugeiconsIcon
-                     icon={ShoppingCart02Icon}
+                     icon={ShoppingBasket01Icon}
                      strokeWidth={1.8}
-                     className="size-8  opacity-70 hover:opacity-100"
+                     className="size-6 opacity-70 hover:opacity-100"
                   />
-                  <span className="grid place-items-center absolute top-0 -right-1 size-4 text-[10px] font-semibold rounded-full bg-rose-500 text-white">
-                     0
-                  </span>
                </button>
             </div>
          </nav>
