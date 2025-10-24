@@ -8,19 +8,15 @@ import {
    SelectValue,
 } from "@/components/ui/select";
 import { filters } from "@/conts";
-import { useSearchParams } from "next/navigation";
-import { useQueryState } from "nuqs";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function ProductFilter() {
    const searchParams = useSearchParams();
-   const [sort, setSort] = useQueryState("sort", {
-      defaultValue: searchParams.get("sort") ?? "latest_desc",
-      shallow: true,
-      history: "push"
-   })
+   
+   const router = useRouter()
 
    return (
-      <Select value={sort} onValueChange={setSort}>
+      <Select defaultValue={searchParams.get("sort") ?? "latest_desc"} onValueChange={(value) => router.push(value)}>
          <SelectTrigger className="w-[180px]">
             <SelectValue placeholder="Sort by" />
          </SelectTrigger>
