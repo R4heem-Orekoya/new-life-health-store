@@ -16,7 +16,7 @@ export default function ProductFilter() {
    const router = useRouter()
 
    return (
-      <Select defaultValue={searchParams.get("sort") ?? "latest_desc"} onValueChange={(value) => router.push(value)}>
+      <Select defaultValue={searchParams.get("sort") ?? "latest_desc"} onValueChange={(value) => router.push(`/products/${value}`)}>
          <SelectTrigger className="w-[180px]">
             <SelectValue placeholder="Sort by" />
          </SelectTrigger>
