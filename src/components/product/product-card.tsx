@@ -32,6 +32,9 @@ export default function ProductCard({ product }: ProductCardProps) {
          </div>
 
          <div className="mt-4">
+            <p className="text-xs text-primary font-medium pb-2">
+               {product.productType ? product.productType : "Uncategorized"}
+            </p>
             <h3 className="text-base font-semibold leading-tight line-clamp-2">
                {title}
             </h3>
@@ -60,7 +63,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             </div>
 
             <Button asChild variant="outline" className="w-full mt-4">
-               <Link href={`/products/${handle}`}>View Details</Link>
+               <Link href={`/product/${handle}`}>View Details</Link>
             </Button>
          </div>
       </div>

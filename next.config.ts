@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
             pathname: "/s/files/1/0664/0218/9430/files/**",
          },
       ],
-   },
+   }
 };
 
 export default nextConfig;

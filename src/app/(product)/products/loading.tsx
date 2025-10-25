@@ -1,7 +1,8 @@
-import ProductFilter from "@/components/product-filter";
-import ProductsSkeleton from "@/components/product-skeleton";
+import ProductFilter from "@/components/product/product-filter";
+import ProductsSkeleton from "@/components/product/product-skeleton";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export default function Loading() {
    return (
@@ -23,8 +24,9 @@ export default function Loading() {
                   Shop supplements that fit your lifestyle and health goals.
                </p>
             </div>
-
-            <ProductFilter />
+            <Suspense>
+               <ProductFilter />
+            </Suspense>
          </div>
 
          <ProductsSkeleton />

@@ -1,10 +1,12 @@
-import { Skeleton } from "./ui/skeleton";
+import { Skeleton } from "../ui/skeleton";
 
 interface ProductsSkeletonProps {
-   length?: number
+   length?: number;
 }
 
-export default function ProductsSkeleton({ length = 8 }: ProductsSkeletonProps) {
+export default function ProductsSkeleton({
+   length = 8,
+}: ProductsSkeletonProps) {
    return (
       <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-8">
          {Array.from({ length }).map((_, i) => (

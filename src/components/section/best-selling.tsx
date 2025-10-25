@@ -1,4 +1,4 @@
-import ProductCard from "../product-card";
+import ProductCard from "../product/product-card";
 import { Button } from "../ui/button";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ShoppingCart01Icon } from "@hugeicons/core-free-icons";
@@ -6,11 +6,13 @@ import Link from "next/link";
 import { getProducts } from "@/shopify/utils";
 import { Product } from "@/shopify/types/storefront.types";
 
-export default async function BestSelling() { 
-   const bestSellingProducts = (await getProducts({ 
-      take: 4
-   })) as Product[]
-   
+export default async function BestSelling() {
+   const { products } = (await getProducts({
+      take: 4,
+   })); 
+    
+   const bestSellingProducts = products as Product[] | undefined
+
    return (
       <section className="py-24">
          <div className="text-center mb-12">
@@ -24,9 +26,10 @@ export default async function BestSelling() {
          </div>
 
          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-4 sm:gap-x-6 gap-y-8 max-w-6xl mx-auto">
-            {bestSellingProducts && bestSellingProducts.map((product) => (
-               <ProductCard key={product.id} product={product} />
-            ))}
+            {bestSellingProducts &&
+               bestSellingProducts.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+               ))}
          </div>
 
          <div className="flex justify-center mt-12">

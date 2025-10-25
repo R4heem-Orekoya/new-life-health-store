@@ -1,46 +1,56 @@
 export const productsQuery = `
    #graphql
    query GetProducts(
-      $first: Int!,
+      $first: Int,
+      $after: String,
       $query: String,
       $sortKey: ProductSortKeys,
       $reverse: Boolean
    ) {
       products(
-         first: $first,
+         first: $first, 
+         after: $after,
          query: $query,
          sortKey: $sortKey,
          reverse: $reverse
       ) {
-         edges {
-         node {
-            id
-            title
-            handle
-            description
-            images(first: 1) {
-               edges {
+         edges { 
+            cursor
+            node {
+               id
+               title
+               handle
+               productType
+               description
+               images(first: 1) {
+                  edges {
+                     node {
+                        url
+                        altText
+                     }
+                  }
+               }
+               variants(first: 1) {
+                  edges {
                   node {
-                     url
-                     altText
+                     price {
+                        amount
+                        currencyCode
+                     }
+                     compareAtPrice {
+                        amount
+                        currencyCode
+                     }
+                  }
                   }
                }
             }
-            variants(first: 1) {
-               edges {
-               node {
-                  price {
-                     amount
-                     currencyCode
-                  }
-                  compareAtPrice {
-                     amount
-                     currencyCode
-                  }
-               }
-               }
-            }
-         }
+         } 
+         pageInfo {
+            hasNextPage
+            hasPreviousPage
+            endCursor
+            startCursor
          }
       }
    }

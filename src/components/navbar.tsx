@@ -28,7 +28,9 @@ export default function Navbar() {
    return (
       <header className="w-full justify-center">
          <nav className="flex items-center justify-between w-[min(1200px,90%)] mx-auto h-16">
-            <Logo />
+            <Link href="/">
+               <Logo />
+            </Link>
 
             <div className="flex items-center gap-12">
                <ul className="flex items-center gap-6 max-sm:hidden">

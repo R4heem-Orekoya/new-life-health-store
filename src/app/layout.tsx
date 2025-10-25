@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
-import { NuqsAdapter } from 'nuqs/adapters/next/app'
+import { NuqsAdapter } from "nuqs/adapters/next/app";
+import Footer from "@/components/section/footer";
 
 const inter = Manrope({
    variable: "--font-sans",
@@ -25,6 +26,7 @@ export default function RootLayout({
             <NuqsAdapter>
                <Navbar />
                <main>{children}</main>
+               <Footer />
             </NuqsAdapter>
          </body>
       </html>

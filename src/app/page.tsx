@@ -4,7 +4,6 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import Link from "next/link";
 import Hero from "@/components/section/hero";
 import BestSelling from "@/components/section/best-selling";
-import Footer from "@/components/section/footer";
 import Testimonials from "@/components/section/testimonials";
 
 export default function Home() {
@@ -38,7 +37,6 @@ export default function Home() {
          </section>
 
          <Testimonials />
-         <Footer />
       </>
    );
 }

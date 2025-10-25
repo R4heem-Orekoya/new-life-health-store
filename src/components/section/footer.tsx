@@ -1,4 +1,4 @@
-import { HugeiconsIcon } from "@hugeicons/react"; 
+import { HugeiconsIcon } from "@hugeicons/react";
 import {
    Facebook01Icon,
    SmartPhone01Icon,
