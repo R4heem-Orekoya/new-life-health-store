@@ -25,7 +25,7 @@ export default async function ProductsPage({
       filters.find((f) => f.value === "latest_desc")!;
 
    const { products: productsData, pageInfo } = await getProducts({
-      take: 2,
+      take: 100,
       after,
       query: searchQuery,
       sortKey: activeFilter.sortKey,
