@@ -6,6 +6,7 @@ import { getProducts } from "@/shopify/utils";
 import { Product } from "@/shopify/types/storefront.types";
 import ProductCard from "@/components/product-card";
 import { filters } from "@/conts";
+import ProductsSkeleton from "@/components/product-skeleton";
 
 export default async function ProductsPage({
    searchParams,
@@ -48,8 +49,8 @@ export default async function ProductsPage({
             <ProductFilter />
          </div>
 
-         <Suspense fallback={<p>Loading products...</p>}>
-            <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-8">
+         <Suspense fallback={<ProductsSkeleton />}>
+            <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-4 sm:gap-x-6 gap-y-8">
                {products &&
                   products.map((product) => (
                      <ProductCard key={product.id} product={product} />

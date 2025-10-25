@@ -12,11 +12,14 @@ import { useRouter, useSearchParams } from "next/navigation";
 
 export default function ProductFilter() {
    const searchParams = useSearchParams();
-   
-   const router = useRouter()
+
+   const router = useRouter();
 
    return (
-      <Select defaultValue={searchParams.get("sort") ?? "latest_desc"} onValueChange={(value) => router.push(`/products?sort=${value}`)}>
+      <Select
+         defaultValue={searchParams.get("sort") ?? "latest_desc"}
+         onValueChange={(value) => router.push(`/products?sort=${value}`)}
+      >
          <SelectTrigger className="w-[180px]">
             <SelectValue placeholder="Sort by" />
          </SelectTrigger>
