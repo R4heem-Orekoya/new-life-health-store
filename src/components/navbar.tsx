@@ -11,10 +11,6 @@ const Navlinks = [
       href: "/about",
    },
    {
-      label: "Blog",
-      href: "/blog",
-   },
-   {
       label: "Products",
       href: "/products",
    },

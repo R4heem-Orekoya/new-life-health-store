@@ -15,7 +15,7 @@ export default function Footer() {
          <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
             <div>
                <h3 className="text-xl font-semibold tracking-tight text-primary">
-                  NeoLife Wellness
+                  New Life Health Store
                </h3>
                <p className="text-muted/60 font-medium text-sm mt-3 leading-relaxed">
                   Empowering healthier, happier lives through science-backed,

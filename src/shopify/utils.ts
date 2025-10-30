@@ -14,7 +14,6 @@ type GetProductsParams = {
 
 export async function getProducts({
    take,
-   after,
    query,
    sortKey,
    reverse,
