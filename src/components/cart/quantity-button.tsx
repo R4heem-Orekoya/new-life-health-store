@@ -21,7 +21,11 @@ export default function QuantityButtons({ item }: QuantityButtonsProps) {
             className="size-8"
             onClick={() => decreaseItem(item.variant.id)}
          >
-            <HugeiconsIcon icon={PlusSignIcon} className="size-3" strokeWidth={1.8} />
+            <HugeiconsIcon
+               icon={MinusSignIcon}
+               className="size-3"
+               strokeWidth={1.8}
+            />
          </Button>
 
          <NumberFlow
@@ -38,7 +42,11 @@ export default function QuantityButtons({ item }: QuantityButtonsProps) {
             className="size-8"
             onClick={() => increaseItem(item.variant.id)}
          >
-            <HugeiconsIcon icon={MinusSignIcon} className="size-3" strokeWidth={1.8} />
+            <HugeiconsIcon
+               icon={PlusSignIcon}
+               className="size-3"
+               strokeWidth={1.8}
+            />
          </Button>
       </div>
    );

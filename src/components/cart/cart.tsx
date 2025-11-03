@@ -82,7 +82,7 @@ export default function Cart() {
                            <span className="text-sm font-medium">
                               Subtotal:
                            </span>
-                           <span className="text-xs font-medium">
+                           <span className="text-lg text-primary font-semibold">
                               {formatPrice({
                                  amount: cartTotal,
                                  currency: "NGN",
