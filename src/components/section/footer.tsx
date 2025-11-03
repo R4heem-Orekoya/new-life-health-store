@@ -79,13 +79,8 @@ export default function Footer() {
                      </Link>
                   </li>
                   <li>
-                     <Link href="/testimonials" className="hover:text-primary">
+                     <Link href="#testimonials" className="hover:text-primary">
                         Testimonials
-                     </Link>
-                  </li>
-                  <li>
-                     <Link href="/blog" className="hover:text-primary">
-                        Health Blog
                      </Link>
                   </li>
                </ul>
@@ -95,12 +90,12 @@ export default function Footer() {
                <h4 className="font-semibold text-lg mb-4">Support</h4>
                <ul className="space-y-2 text-sm text-muted/60 font-medium">
                   <li>
-                     <Link href="/contact" className="hover:text-primary">
+                     <Link href="#" className="hover:text-primary">
                         Contact Us
                      </Link>
                   </li>
                   <li>
-                     <Link href="/faq" className="hover:text-primary">
+                     <Link href="#" className="hover:text-primary">
                         FAQs
                      </Link>
                   </li>
