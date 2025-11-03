@@ -9,7 +9,7 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
-   const { images, handle, variants, title, description } = product;
+   const { images, handle, variants, title } = product;
 
    const firstVariant = variants.edges[0]?.node;
    const price = parseFloat(firstVariant?.price.amount || "0");
@@ -24,7 +24,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       <div className="group col-span-1 duration-300">
          <div className="relative w-full aspect-square border rounded-xl overflow-hidden">
             <Image
-               src={images.edges[0].node.url}
+               src={imageUrl}
                alt={title}
                fill
                className="object-contain scale-90"

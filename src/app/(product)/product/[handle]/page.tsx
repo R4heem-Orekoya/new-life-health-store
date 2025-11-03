@@ -6,7 +6,6 @@ import { customRender } from "@/lib/react-html-parser";
 import ProductPrice from "@/components/product/product-price";
 import VariantSelector from "@/components/product/variant-selector";
 import Image from "next/image";
-import AddToCartButton from "@/components/add-to-cart-btn";
 import { HugeiconsIcon } from "@hugeicons/react";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
@@ -16,6 +15,7 @@ import {
    TruckDeliveryIcon,
 } from "@hugeicons/core-free-icons";
 import RelatedProducts from "@/components/product/related-products"; 
+import AddToCartButton from "@/components/cart/add-to-cart-btn";
  
 export async function generateStaticParams() {
    const data = await getProducts({ 

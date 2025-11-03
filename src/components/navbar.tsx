@@ -1,8 +1,7 @@
 "use client";
 
-import { ShoppingBasket01Icon } from "@hugeicons/core-free-icons";
+import Cart from "./cart/cart";
 import Logo from "./logo";
-import { HugeiconsIcon } from "@hugeicons/react";
 import Link from "next/link";
 
 const Navlinks = [
@@ -49,13 +48,7 @@ export default function Navbar() {
                   ))}
                </ul>
 
-               <button className="relative text-primary cursor-pointer">
-                  <HugeiconsIcon
-                     icon={ShoppingBasket01Icon}
-                     strokeWidth={1.8}
-                     className="size-6 opacity-70 hover:opacity-100"
-                  />
-               </button>
+               <Cart />
             </div>
          </nav>
       </header>

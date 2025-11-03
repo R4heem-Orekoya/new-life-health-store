@@ -8,7 +8,6 @@ import ProductCard from "@/components/product/product-card";
 import { filters } from "@/conts";
 import { PackageSearch01Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import PaginationBtn from "@/components/product/pagination-btn";
 
 export default async function ProductsPage({
    searchParams,
@@ -24,7 +23,7 @@ export default async function ProductsPage({
       filters.find((f) => f.value === sort) ??
       filters.find((f) => f.value === "latest_desc")!;
 
-   const { products: productsData, pageInfo } = await getProducts({
+   const { products: productsData } = await getProducts({
       take: 100,
       after,
       query: searchQuery,
